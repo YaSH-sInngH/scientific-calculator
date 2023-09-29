@@ -63,6 +63,11 @@ Array.from(buttons).forEach((button)=>{
             string = Math.log10(string);
             document.querySelector('.js-input').value = string;
         }
+        else if (e.target.innerHTML == 'log')
+        {
+            string = Math.e(string);
+            document.querySelector('.js-input').value = string;
+        }
         else{
             console.log(e.target);
             string = string + e.target.innerHTML;
