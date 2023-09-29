@@ -1,6 +1,5 @@
 let string='';
 let buttons = document.querySelectorAll('.container-grid button');
-let pendingSquareRoot = false;
 
 Array.from(buttons).forEach((button)=>{
     button.addEventListener('click', (e)=>{
@@ -37,9 +36,31 @@ Array.from(buttons).forEach((button)=>{
             string = Math.tan(radians);
             document.querySelector('.js-input').value = string;
         }
-        else if (e.target.innerHTML == '√')
+        else if (e.target.innerHTML == 'sqrt')
         {
             string = Math.sqrt(string);
+            document.querySelector('.js-input').value = string;
+        }
+        else if (e.target.innerHTML == 'sqr')
+        {
+            let sqr = string*string;
+            string = eval(sqr);
+            document.querySelector('.js-input').value = string;
+        }
+        else if (e.target.innerHTML == 'cube')
+        {
+            let cube = string*string*string;
+            string = eval(cube);
+            document.querySelector('.js-input').value = string;
+        }
+        else if (e.target.innerHTML == 'ln')
+        {
+            string = Math.log(string);
+            document.querySelector('.js-input').value = string;
+        }
+        else if (e.target.innerHTML == 'log')
+        {
+            string = Math.log10(string);
             document.querySelector('.js-input').value = string;
         }
         else{
