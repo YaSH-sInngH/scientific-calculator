@@ -10,4 +10,4 @@
 ***JAVASCRIPT***
 
 ##
-Open with Live Server
+https://scientific-calculator-mint.netlify.app/
